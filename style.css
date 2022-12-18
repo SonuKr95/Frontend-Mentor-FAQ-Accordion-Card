@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: #af67e9;
+  --Soft-blue: #6565e7;
+  --Light-grayish-blue: #e7e7e9;
+}
+
+img {
+  max-width: 100%;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to top,
+    var(--Soft-blue),
+    var(--Soft-violet)
+  );
+}
+
+.main-container {
+  max-width: 350px;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.images {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  bottom: 8rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* height: 200px; */
+}
+
+.images img:nth-child(2) {
+  margin-top: -5em;
+}
+
+.faq-form {
+  margin-top: -5em;
+}
+
+.seprate {
+  background-color: hsl(240, 5%, 91%);
+  height: 1px;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: start;
+}
+
+.headings img {
+  position: relative;
+  top: -21px;
+  left: 94%;
+}
+
+.headings h4 {
+  margin: 1em 0;
+  font-weight: 300;
+}
+.headings p {
+  margin: 1em 0;
+}
+
+.q > p {
+  margin-bottom: 1em;
+  /* display: none; */
+}
+
+.headings > .answer {
+  display: none;
+}
+
+.active > .answer {
+  display: block;
+}
+.active > .questions {
+  font-weight: 900;
+}
+
+.active img {
+  transition: ease-out 0.5s;
+  transform: rotate(180deg);
+}
+/* .heading img:active {
+  transform: rotate(180 deg);
+} */
+
+.questions:hover {
+  color: var(--Soft-red);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .main-container {
+    display: flex;
+    max-width: 600px;
+    padding: 5em;
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .images {
+    top: 1em;
+    right: 6em;
+  }
+  .faq-form {
+    margin-top: 0em;
+    flex-basis: 90%;
+  }
+}
